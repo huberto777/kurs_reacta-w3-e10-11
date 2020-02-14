@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-      Kurs Reacta - zadanie 3.10/komponent niekontrolowany/dodanie edycji
+      Kurs Reacta - zadanie 3.10-11/komponent niekontrolowany/dodanie edycji
       timeboxa
     </title>
     <script
@@ -203,7 +203,7 @@
             />
             {this.state.timeboxes.map(timebox => (
               <Timebox
-                key={uuid.v4()}
+                key={timebox.id}
                 timebox={timebox}
                 onDelete={() => this.handleDelete(timebox.id)}
                 onUpdate={this.handleUpdate}
@@ -262,8 +262,10 @@
         const { title, totalTimeInMinutes } = this.state;
         if(title.length < 3 || totalTimeInMinutes <= 0) return;
         this.props.onUpdate(this.props.id, {
+          id: this.props.id,
           title,
-          totalTimeInMinutes
+          totalTimeInMinutes,
+          isEdit: false
         });
       };
 
