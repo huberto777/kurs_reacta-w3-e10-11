@@ -1,0 +1,35 @@
+.App {
+    font-family: sans-serif;
+  }
+
+  .Timebox {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  .TimeboxEditor,
+  .TimeboxCreator {
+    text-align: right;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  input {
+    min-width: 60%;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  /* utility class */
+  .inactive {
+    filter: blur(2px) grayscale(1);
+  }
